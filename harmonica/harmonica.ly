@@ -11,5 +11,5 @@
       title = "Мелодии для губной гармошки До-мажор"
   }
 
-  \include "old.ly"
+  \include "melody.ly"
 }
