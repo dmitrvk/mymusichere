@@ -3,6 +3,7 @@
 \header {
   title = "Fmajsong"
   composer = "Dmitry Kalyukov"
+  license = "Creative Commons Attribution-ShareAlike 4.0"
 }
 
 upper = \relative c'' {
