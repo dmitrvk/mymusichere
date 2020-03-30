@@ -1,6 +1,6 @@
 # MyMusicHere
 
-![CI](https://github.com/dmitrvk/mymusichere/workflows/CI/badge.svg)
+![build](https://github.com/dmitrvk/mymusichere/workflows/build/badge.svg)
 [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
 
 In this repo you will find music scores typeset with the
