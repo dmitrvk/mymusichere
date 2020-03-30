@@ -1,0 +1,23 @@
+name: build
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: |
+        sudo apt install imagemagick
+        wget http://lilypond.org/download/binaries/linux-64/lilypond-2.20.0-1.linux-64.sh
+        sh lilypond-2.20.0-1.linux-64.sh --batch
+
+    - name: Build
+      run: LILYPOND=$HOME/bin/lilypond make
