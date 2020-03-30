@@ -20,4 +20,7 @@ jobs:
         sh lilypond-2.20.0-1.linux-64.sh --batch
 
     - name: Build
-      run: LILYPOND=$HOME/bin/lilypond make
+      run: make
+      env:
+        LILYPOND: $HOME/bin/lilypond
+        SECRET_KEY: none
