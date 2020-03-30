@@ -1,8 +1,8 @@
 \score {
   \header {
-    title = "Мелодия"
-    subtitle = "из к/ф Шерлок Холмс и доктор Ватсон"
-    composer = "Владимир Дашкевич"
+    title = "Melody"
+    subtitle = "from Sherlock Holmes and Dr. Watson movie"
+    composer = "Vladimir Dashkevich"
   }
 
   \new Staff \relative c'' {
