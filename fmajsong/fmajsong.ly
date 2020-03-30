@@ -11,8 +11,8 @@ upper = \relative c'' {
   \time 6/8
   \key f \major
 
-  c4. c4 c8
-  d8 c4 r4.
+  c4. c4 c8 | d8 c4 r4. |
+  f8 f f e d c | c4. r4. |
 }
 
 lower = \relative c {
@@ -20,8 +20,8 @@ lower = \relative c {
   \time 6/8
   \key f \major
 
-  f8 <a c> <a c> f8 <a c> <a c>
-  f8 <a c> <a c> f8 <a c> <a c>
+  \repeat unfold 4 {f8 <a c> <a c>} |
+  \repeat unfold 2 {f8 <bes d f> <bes d f>} | \repeat unfold 2 {f8 <a c> <a c>}
 }
 
 \score {
