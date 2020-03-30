@@ -22,5 +22,4 @@ jobs:
     - name: Build
       run: make
       env:
-        LILYPOND: $HOME/bin/lilypond
-        SECRET_KEY: none
+        LILYPOND: $(HOME)/bin/lilypond
