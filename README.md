@@ -1,9 +1,10 @@
 # MyMusicHere
 
+![CI](https://github.com/dmitrvk/mymusichere/workflows/CI/badge.svg)
+[![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
+
 In this repo you will find music scores typeset with the
 [LilyPond](https://lilypond.org/).
-
-[![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
 
 This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0
 International License][cc-by-sa].
