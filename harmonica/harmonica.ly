@@ -8,7 +8,7 @@
   \markup { \vspace #1 }
 
   \header {
-    title = "Мелодии для губной гармошки До-мажор"
+    title = "Music for C harmonica"
     license = "Creative Commons Attribution-ShareAlike 4.0"
   }
 
