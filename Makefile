@@ -4,7 +4,7 @@ ifndef LILYPOND
 LILYPOND=lilypond
 endif
 
-all: out/harmonica/harmonica.pdf out/fmajsong/fmajsong.pdf out/castlejam/castlejam.pdf
+all: out/harmonica/harmonica.pdf out/fmajsong/fmajsong.pdf out/dmajsong/dmajsong.pdf out/castlejam/castlejam.pdf
 
 out/harmonica/harmonica.pdf: harmonica/*.ly
 	-mkdir -p out/harmonica
@@ -19,6 +19,13 @@ out/fmajsong/fmajsong.pdf: fmajsong/*.ly
 	mv fmajsong.pdf fmajsong*.png out/fmajsong/
 	cd out/fmajsong; if [ -f fmajsong.png ]; then mv fmajsong.png fmajsong-page1.png; fi
 	cd out/fmajsong; convert -format png -thumbnail 300x300 "$$(ls -1 *.png | head -n 1)" thumbnail.png
+
+out/dmajsong/dmajsong.pdf: dmajsong/*.ly
+	-mkdir -p out/dmajsong
+	$(LILYPOND) $(LILYPOND_PARAMS) dmajsong/dmajsong.ly
+	mv dmajsong.pdf dmajsong*.png out/dmajsong/
+	cd out/dmajsong; if [ -f dmajsong.png ]; then mv dmajsong.png dmajsong-page1.png; fi
+	cd out/dmajsong; convert -format png -thumbnail 300x300 "$$(ls -1 *.png | head -n 1)" thumbnail.png
 
 out/castlejam/castlejam.pdf: castlejam/*.ly
 	-mkdir -p out/castlejam
