@@ -10,6 +10,7 @@
   \header {
     title = "Music for C harmonica"
     license = "Creative Commons Attribution-ShareAlike 4.0"
+    status = "unfinished"
   }
 
   \include "melody.ly"

@@ -4,6 +4,7 @@
   title = "Fmajsong"
   composer = "Dmitry Kalyukov"
   license = "Creative Commons Attribution-ShareAlike 4.0"
+  status = "unfinished"
 }
 
 upper = \relative c'' {
