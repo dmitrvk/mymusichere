@@ -3,7 +3,7 @@
 \header {
   title = "Castle Jam"
   subtitle = "from Stronghold game"
-  composer = "Dmitry Kalyukov"
+  arranger = "Dmitry Kalyukov"
   license = "Creative Commons Attribution-ShareAlike 4.0"
   status = "unfinished"
 }
