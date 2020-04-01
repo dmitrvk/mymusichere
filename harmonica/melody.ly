@@ -6,8 +6,6 @@
   }
 
   \new Staff \relative c'' {
-    \key d \minor
-
     \partial 8 d8
 
     a'4 f8 d a'4 f8 g16 f
