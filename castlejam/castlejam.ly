@@ -16,11 +16,13 @@ upper = \relative c'' {
   \key c \minor
 
   \upperIntro
+  \upperAa
 
-  ^"A" \repeat unfold 16 {r2}
-  ^"B" \repeat unfold 16 {r2}
-  ^"A" \repeat unfold 8 {r2}
-  ^"B" \repeat unfold 16 {r2}
+  \repeat unfold 16 {r2}
+
+  \upperAb
+
+  \repeat unfold 16 {r2}
   \mark \markup { \musicglyph #"scripts.segno" }
 
   \repeat unfold 23 {r2}
@@ -47,10 +49,12 @@ lower = \relative c {
   \tempo 4 = 70
 
   \lowerIntro
+  \lowerAa
 
   \repeat unfold 16 {r2}
-  \repeat unfold 16 {r2}
-  \repeat unfold 8 {r2}
+
+  \lowerAb
+
   \repeat unfold 16 {r2}
 
   \repeat unfold 23 {r2}
