@@ -8,13 +8,7 @@
   status = "unfinished"
 }
 
-upperIntro = {
-  r2 | r2 | r2 | r2 |
-  c2 | bes | f | g |
-  <c, ees> | <ees g> | <c f> | <c g'> |
-  <ees g> | <g bes> | <f a> | g |
-  <c, ees> | <bes d> | <a ees'> | r2 |
-}
+\include "castlejam.ily"
 
 upper = \relative c'' {
   \clef treble
@@ -22,21 +16,28 @@ upper = \relative c'' {
   \key c \minor
 
   \upperIntro
-}
 
+  ^"A" \repeat unfold 16 {r2}
+  ^"B" \repeat unfold 16 {r2}
+  ^"A" \repeat unfold 8 {r2}
+  ^"B" \repeat unfold 16 {r2}
+  \mark \markup { \musicglyph #"scripts.segno" }
 
-lowerIntro = {
-  <c, c'>4 <c' ees g c> |
-  <bes, bes'> <bes' ees g bes> |
-  <f, f'> <c'' f c'> |
-  <c g' c>8-. <c f c'>-. <c g' c>4 |
+  \repeat unfold 23 {r2}
+  r2
+  \mark \markup { \musicglyph #"scripts.coda" }
 
-  \repeat unfold 4 {
-    <c, c'>4 <c' ees g c> |
-    <bes, bes'> <bes' ees g bes> |
-    <f f'> <c' f c'> |
-    <c g' c>8-. <c f c'>-. <c g' c>4 |
-  }
+  \repeat unfold 15 {r2}
+  \mark "D.S. al Coda"
+  r2
+
+  \bar "||"
+  \break
+  \mark \markup { \musicglyph #"scripts.coda" Coda }
+  \repeat unfold 16 {r2}
+  r2
+
+  \bar "|."
 }
 
 lower = \relative c {
@@ -47,6 +48,24 @@ lower = \relative c {
 
   \lowerIntro
 
+  \repeat unfold 16 {r2}
+  \repeat unfold 16 {r2}
+  \repeat unfold 8 {r2}
+  \repeat unfold 16 {r2}
+
+  \repeat unfold 23 {r2}
+  r2
+
+  \repeat unfold 15 {r2}
+  r2
+
+  %\bar "||"
+  %\break
+  %\mark \markup { \musicglyph #"scripts.coda" Coda }
+  \repeat unfold 16 {r2}
+  r2
+
+  %\bar "|."
 }
 
 \score {
