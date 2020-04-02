@@ -21,7 +21,7 @@ all: $(PREREQUISITES)
 	@for score in $(SCORES); do mv $$score.pdf $$score*.png $(OUT_DIR)/$$score/; done
 	@#
 	@# Create thumbnails
-	@for score in $(SCORES); do convert -format png -colorspace GRAY -thumbnail 600x "$$(ls -1 $(OUT_DIR)/$$score/*.png | head -n 1)" $(OUT_DIR)/$$score/thumbnail.png; done
+	@for score in $(SCORES); do convert -colorspace GRAY -units pixelsperinch -density 150 -thumbnail 360x "$$(ls -1 $(OUT_DIR)/$$score/*.png | head -n 1)" $(OUT_DIR)/$$score/thumbnail.webp; done
 
 .PHONY: clean
 
