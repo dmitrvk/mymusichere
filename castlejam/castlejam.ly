@@ -18,9 +18,7 @@ upper = \relative c'' {
 
   \upperIntro
   \upperAa
-
-  \repeat unfold 16 {r2}
-
+  \upperBa
   \upperAb
 
   \repeat unfold 16 {r2}
@@ -51,9 +49,7 @@ lower = \relative c {
 
   \lowerIntro
   \lowerAa
-
-  \repeat unfold 16 {r2}
-
+  \lowerBa
   \lowerAb
 
   \repeat unfold 16 {r2}
