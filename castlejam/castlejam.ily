@@ -12,7 +12,7 @@ lowerIntro = \relative c {
   <f, f'> <c'' f c'> |
   <c g' c>8-. <c f c'>-. <c g' c>4 |
 
-  \repeat percent 4 {
+  \repeat unfold 4 {
     <c, c'>4 <c' ees g c> |
     <bes, bes'> <bes' ees g bes> |
     <f f'> <c' f c'> |
@@ -44,7 +44,7 @@ upperAa = \relative c'' {
 }
 
 lowerAa = \relative c {
-  \repeat percent 4 {
+  \repeat unfold 4 {
     <c ees g c>4 <c ees g c>
     <bes ees g bes>4 <bes ees g bes>
     <c f c'>4 <c f c'>
@@ -104,7 +104,7 @@ upperAb = \relative c'' {
 }
 
 lowerAb = \relative c {
-  \repeat percent 2 {
+  \repeat unfold 2 {
     <c ees g c>4 <c ees g c>
     <bes ees g bes>4 <bes ees g bes>
     <c f c'>4 <c f c'>
