@@ -26,4 +26,4 @@ all: $(PREREQUISITES)
 .PHONY: clean
 
 clean:
-	rm -r out
+	-rm -r out
