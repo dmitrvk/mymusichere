@@ -7,7 +7,7 @@ In this repo you will find music scores typeset with
 [LilyPond](https://lilypond.org/).
 
 Compiled versions are available
-[here](https://dmitryk.pythonanywhere.com).
+[here](https://www.mymusichere.me).
 
 [cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
 [cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
