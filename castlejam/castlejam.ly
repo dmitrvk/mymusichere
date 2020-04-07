@@ -23,20 +23,20 @@ upper = \relative c'' {
   \upperAb
   \upperBb
 
-  \mark \markup { \musicglyph #"scripts.segno" }
+  \segno
 
   \repeat unfold 23 {r2}
   r2
-  \mark \markup { \musicglyph #"scripts.coda" }
+  \coda
 
   \repeat unfold 15 {r2}
-  \mark "D.S. al Coda"
+  ^"D.S. al Coda"
   r2
 
   \bar "||"
   \break
-  \mark \markup { \musicglyph #"scripts.coda" Coda }
 
+  \coda^"Coda"
   \upperCoda
 
   \bar "|."
