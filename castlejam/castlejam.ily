@@ -111,3 +111,36 @@ lowerAb = \relative c {
     <c g' c>8-. <c f c'>-. <c g' c>4
   }
 }
+
+upperBb = \relative c'' {
+  c16 d ees f g8 f16 g 
+  g aes g f g4
+  aes16 bes aes g f g aes g
+  f8 ees \autoBeamOff c8. g'16 \autoBeamOn
+
+  \ottava 1
+  c16 d ees f g8 f16 g 
+  g aes g f g4
+  aes16 bes aes r g aes g r
+  f16 g ees8-. c4
+
+  ees16 c d ees f g a bes
+  c ees d c bes g bes c
+  bes aes g f ees d c f
+  ees8-. c-. c4
+
+  g'16 ees d c d ees d \prall c
+  bes aes g aes bes8 aes16 \prall g
+  \ottava 0
+  f ees d ees f8 ees16 \prall d
+  c bes c ees c4
+}
+
+lowerBb = \relative c {
+  \repeat unfold 4 {
+    <c ees g c>4 <c ees g c>
+    <bes ees g bes>4 <bes ees g bes>
+    <c f c'>4 <c f c'>
+    <c g' c>8-. <c f c'>-. <c g' c>4
+  }
+}

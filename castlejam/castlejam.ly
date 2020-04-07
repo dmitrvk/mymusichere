@@ -20,8 +20,8 @@ upper = \relative c'' {
   \upperAa
   \upperBa
   \upperAb
+  \upperBb
 
-  \repeat unfold 16 {r2}
   \mark \markup { \musicglyph #"scripts.segno" }
 
   \repeat unfold 23 {r2}
@@ -45,14 +45,13 @@ lower = \relative c {
   \clef bass
   \time 2/4
   \key c \minor
-  \tempo 4 = 70
+  \tempo 4 = 75
 
   \lowerIntro
   \lowerAa
   \lowerBa
   \lowerAb
-
-  \repeat unfold 16 {r2}
+  \lowerBb
 
   \repeat unfold 23 {r2}
   r2
