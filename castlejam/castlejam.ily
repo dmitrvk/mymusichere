@@ -95,12 +95,12 @@ upperAb = \relative c'' {
   <c c'>4 <c c'>8. <d d'>16
   <bes bes'>8 <g g'>-. <g g'>4
   <a a'>8 <bes bes'>16 <a a'> <g g'>8 <f f'>
-  <g g'>8-. <bes bes'>-. <c c'>4
+  <g g'>8-. <ees ees'>-. <c c'>4
 
-  <c ees c'>4 <c ees c'>8. <d f d'>16
+  <c' ees c'>4 <c ees c'>8. <d f d'>16
   <bes d bes'>8 <g bes g'>-. <g' bes g'>4
-  <f, a>8 bes16 a g8 f
-  g8-. ees-. c4
+  f16 ees d c bes a g f
+  g8-. ees'-. c4
 }
 
 lowerAb = \relative c {
