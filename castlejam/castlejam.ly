@@ -9,6 +9,11 @@
   status = "unfinished"
 }
 
+\paper {
+  top-margin = 1.5\cm
+  bottom-margin = 2\cm
+}
+
 \include "castlejam.ily"
 
 upper = \relative c'' {
