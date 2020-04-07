@@ -164,6 +164,48 @@ lowerBb = \relative c {
   }
 }
 
+upperC = \relative c'' {
+  \repeat unfold 2 {
+    \tuplet 3/2 {g16-2 aes bes} \tuplet 3/2 {c bes aes}
+  }
+  <ees g>8 f-1 <g bes>4
+
+  \ottava 1
+  \repeat unfold 2 {
+    \tuplet 3/2 {g'16-1 aes bes} \tuplet 3/2 {c bes aes}
+  }
+  g8-1-. ees-2-. c4
+  \ottava 0
+
+  \repeat unfold 2 {
+    \tuplet 3/2 {g16-2 aes bes} \tuplet 3/2 {c bes g}
+  }
+  <ees g>8 ees'-. <g, bes>4
+
+  \ottava 1
+  \tuplet 3/2 {g'16-1 aes bes} \tuplet 3/2 {c-1 d-2 ees}
+  \tuplet 3/2 {d-2 c-1 bes-4} \tuplet 3/2 {aes-3 g f}
+  ees8-3-. d-. c4
+  \ottava 0
+
+  \tuplet 3/2 {d16-1 ees f-1} \tuplet 3/2 {g aes bes->}
+  \tuplet 3/2 {aes16 g f} \tuplet 3/2 {ees-4 d c}
+  bes8-1 c-. ees4
+
+  \repeat unfold 5 {r2}
+  r2
+  ^"D.S. al Coda"
+}
+
+lowerC = \relative c {
+  \repeat unfold 4 {
+    <c ees g c>4 <c ees g c>
+    <bes ees g bes>4 <bes ees g bes>
+    <c f c'>4 <c f c'>
+    <c g' c>8-. <c f c'>-. <c g' c>4
+  }
+}
+
 upperCoda = \relative c'' {
   c2 \p
   bes

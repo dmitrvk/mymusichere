@@ -34,9 +34,7 @@ upper = \relative c'' {
   r2
   \coda
 
-  \repeat unfold 15 {r2}
-  ^"D.S. al Coda"
-  r2
+  \upperC
 
   \bar "||"
   \break
@@ -61,9 +59,7 @@ lower = \relative c {
   \repeat unfold 23 {r2}
   r2
 
-  \repeat unfold 15 {r2}
-  r2
-
+  \lowerC
   \lowerCoda
 }
 
