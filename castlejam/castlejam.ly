@@ -15,6 +15,7 @@ upper = \relative c'' {
   \clef treble
   \time 2/4
   \key c \minor
+  \tempo 4 = 75
 
   \upperIntro
   \upperAa
@@ -35,8 +36,8 @@ upper = \relative c'' {
   \bar "||"
   \break
   \mark \markup { \musicglyph #"scripts.coda" Coda }
-  \repeat unfold 16 {r2}
-  r2
+
+  \upperCoda
 
   \bar "|."
 }
@@ -45,7 +46,6 @@ lower = \relative c {
   \clef bass
   \time 2/4
   \key c \minor
-  \tempo 4 = 75
 
   \lowerIntro
   \lowerAa
@@ -59,13 +59,7 @@ lower = \relative c {
   \repeat unfold 15 {r2}
   r2
 
-  %\bar "||"
-  %\break
-  %\mark \markup { \musicglyph #"scripts.coda" Coda }
-  \repeat unfold 16 {r2}
-  r2
-
-  %\bar "|."
+  \lowerCoda
 }
 
 \score {
