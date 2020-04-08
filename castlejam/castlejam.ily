@@ -190,11 +190,27 @@ upperC = \relative c'' {
 
   \tuplet 3/2 {d16-1 ees f-1} \tuplet 3/2 {g aes bes->}
   \tuplet 3/2 {aes16 g f} \tuplet 3/2 {ees-4 d c}
-  bes8-1 c-. ees4
+  bes8-1 c-. \autoBeamOff ees8. c'16-1 \autoBeamOn
 
-  \repeat unfold 5 {r2}
-  r2
+  \ottava 1
+  \tuplet 3/2 {g'16-4 aes g} \tuplet 3/2 {f-3 ees d}
+  \tuplet 3/2 {f16-4 g f} \tuplet 3/2 {ees d f}
+  ees8-3-. g,-1-. c4
+  \ottava 0
+
+  \repeat unfold 2 {
+    \tuplet 3/2 {g,16-2 aes bes} \tuplet 3/2 {c bes aes}
+  }
+  \ottava 1
+  \repeat unfold 2 {
+    \tuplet 3/2 {g'16-2 aes bes} \tuplet 3/2 {c bes aes}
+  }
+
+  \tuplet 3/2 {g16-1 aes bes} \tuplet 3/2 {c-1 d ees}
+  \tuplet 3/2 {f16 g f} \tuplet 3/2 {ees d c}
+  f8-4 g-. c,4 
   ^"D.S. al Coda"
+  \ottava 0
 }
 
 lowerC = \relative c {
