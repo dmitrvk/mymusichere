@@ -9,36 +9,38 @@
   status = "unfinished"
 }
 
+\paper {
+  top-margin = 1.5\cm
+  bottom-margin = 2\cm
+}
+
 \include "castlejam.ily"
 
 upper = \relative c'' {
   \clef treble
   \time 2/4
   \key c \minor
+  \tempo 4 = 75
 
   \upperIntro
   \upperAa
-
-  \repeat unfold 16 {r2}
-
+  \upperBa
   \upperAb
+  \upperBb
 
-  \repeat unfold 16 {r2}
-  \mark \markup { \musicglyph #"scripts.segno" }
+  \segno
 
   \repeat unfold 23 {r2}
   r2
-  \mark \markup { \musicglyph #"scripts.coda" }
+  \coda
 
-  \repeat unfold 15 {r2}
-  \mark "D.S. al Coda"
-  r2
+  \upperC
 
   \bar "||"
   \break
-  \mark \markup { \musicglyph #"scripts.coda" Coda }
-  \repeat unfold 16 {r2}
-  r2
+
+  \coda^"Coda"
+  \upperCoda
 
   \bar "|."
 }
@@ -47,30 +49,18 @@ lower = \relative c {
   \clef bass
   \time 2/4
   \key c \minor
-  \tempo 4 = 70
 
   \lowerIntro
   \lowerAa
-
-  \repeat unfold 16 {r2}
-
+  \lowerBa
   \lowerAb
-
-  \repeat unfold 16 {r2}
+  \lowerBb
 
   \repeat unfold 23 {r2}
   r2
 
-  \repeat unfold 15 {r2}
-  r2
-
-  %\bar "||"
-  %\break
-  %\mark \markup { \musicglyph #"scripts.coda" Coda }
-  \repeat unfold 16 {r2}
-  r2
-
-  %\bar "|."
+  \lowerC
+  \lowerCoda
 }
 
 \score {
