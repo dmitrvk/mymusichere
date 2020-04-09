@@ -5,6 +5,7 @@
   composer = "Dmitry Kalyukov"
   license = "Creative Commons Attribution-ShareAlike 4.0"
   status = "unfinished"
+  instrument = "piano"
 }
 
 upper = \relative c'' {

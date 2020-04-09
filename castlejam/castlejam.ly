@@ -5,6 +5,7 @@
   subtitle = "from Stronghold game"
   subsubtitle = "piano cover"
   arranger = "Arranged by Dmitry Kalyukov"
+  instrument = "piano"
   license = "Creative Commons Attribution-ShareAlike 4.0"
   status = "unfinished"
 }
