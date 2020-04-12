@@ -1,4 +1,4 @@
-SCORES = castlejam dmajsong fmajsong harmonica
+SCORES = castlejam
 OUT_DIR = out/scores
 
 ifndef LILYPOND
