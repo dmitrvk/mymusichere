@@ -28,21 +28,10 @@ upper = \relative c'' {
   \upperBa
   \upperAb
   \upperBb
-
-  \segno
-
-  \repeat unfold 23 {r2}
-  r2
-  \coda
-
   \upperC
-
-  \bar "||"
-  \break
-
-  \coda^"Coda"
+  \upperD
+  \bar "||" \break
   \upperCoda
-
   \bar "|."
 }
 
@@ -56,11 +45,8 @@ lower = \relative c {
   \lowerBa
   \lowerAb
   \lowerBb
-
-  \repeat unfold 23 {r2}
-  r2
-
   \lowerC
+  \lowerD
   \lowerCoda
 }
 

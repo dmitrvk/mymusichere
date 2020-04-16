@@ -164,7 +164,75 @@ lowerBb = \relative c {
   }
 }
 
+
 upperC = \relative c'' {
+  \segno
+
+  ees8 c d f
+  g a bes g
+  a bes16 a f8-. d-.
+  g16 a g f g8 a
+
+  bes8 a16 g a8 f
+  g f16 ees d4
+  c8 d16 ees d c bes8
+  c8-. c f16 g a8
+
+  bes8 a16 g a8 f
+  g f16 ees d4
+  c8 d16 ees d c bes8
+  a8-. a g4
+
+  ees'8 c d f
+  g a bes g
+  a bes16 a f8-. d-.
+  g16 a g f g8 a
+
+  bes8 a16 g a8 f
+  g f16 ees d4
+  c8 d16 ees d c bes8
+  c8-. c f16 g a8
+
+  bes8 a16 g a8 f
+  g f16 ees d4
+  c8 d16 ees d c bes8
+  <a f'>8-. <a f'> <g g'>4
+}
+
+lowerC = \relative c {
+  <c g'>4 <c g'>
+  <ees bes'> <ees bes'>
+  <f c'>4 <f c'>8-. <d a'>-.
+  <ees bes'>4. r8
+
+  <g d'>4 <d a'>
+  <ees bes'> <d a'>
+  <c g'> <d a'>
+  <c g'>8-. <c g'> <d a'>4
+
+  <g d'>4 <d a'>
+  <ees bes'> <d a'>
+  <c g'> <d a'>
+  <f c'>8-. <f c'> <g d'>4
+
+  <c, g'>4 <c g'>
+  <ees bes'> <ees bes'>
+  <f c'>4 <f c'>8-. <d a'>-.
+  <ees bes'>4. r8
+
+  <g d'>4 <d a'>
+  <ees bes'> <d a'>
+  <c g'> <d a'>
+  <c g'>8-. <c g'> <d a'>4
+
+  <g d'>4 <d a'>
+  <ees bes'> <d a'>
+  <c g'> <d a'>
+  <f c'>8-. <f c'> <g d'>4
+}
+
+
+upperD = \relative c'' {
   \repeat unfold 2 {
     \tuplet 3/2 {g16-2 aes bes} \tuplet 3/2 {c bes aes}
   }
@@ -213,7 +281,7 @@ upperC = \relative c'' {
   \ottava 0
 }
 
-lowerC = \relative c {
+lowerD = \relative c {
   \repeat unfold 4 {
     <c ees g c>4 <c ees g c>
     <bes ees g bes>4 <bes ees g bes>
@@ -223,6 +291,8 @@ lowerC = \relative c {
 }
 
 upperCoda = \relative c'' {
+  \coda
+
   c2 \p
   bes
   f
