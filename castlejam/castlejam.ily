@@ -179,23 +179,23 @@ upperC = \relative c'' {
   c8-. c f16 g a8
 
   bes8 a16 g a8 f
-  g f16 ees d4
+  f16 g f ees d4
   c8 d16 ees d c bes8
   a8-. a g4
 
-  ees'8 c d f
-  g a bes g
-  a bes16 a f8-. d-.
-  g16 a g f g8 a
+  <c ees>8 <g c> <bes d> <d f>
+  <ees g> <f a> <g bes> <ees g>
+  <f a> <g bes>16 <f a> <d f>8-. d-.
+  <ees g>16 <f a> <ees g> <d f> <ees g>8 <a c>
 
-  bes8 a16 g a8 f
-  g f16 ees d4
-  c8 d16 ees d c bes8
-  c8-. c f16 g a8
+  <bes d>8 <a c>16 <g bes> <a c>8 <f a>
+  <g bes> <f a>16 <ees g> <d f>4
+  <c ees>8 <d f>16 <ees g> <d f> <c ees> <bes d>8
+  <c ees>8-. <c ees> <f a>16 <g bes> <a c>8
 
-  bes8 a16 g a8 f
-  g f16 ees d4
-  c8 d16 ees d c bes8
+  <bes d>8 <a c>16 <g bes> <a c>8 <f a>
+  <g bes> <f a>16 <ees g> <d f>4
+  <c ees>8 <d f>16 <ees g> <d f> <c ees> <bes d>8
   <a f'>8-. <a f'> <g g'>4
 }
 
