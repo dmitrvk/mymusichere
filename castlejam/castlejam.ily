@@ -200,35 +200,22 @@ upperC = \relative c'' {
 }
 
 lowerC = \relative c {
-  <c g'>4 <c g'>
-  <ees bes'> <ees bes'>
-  <f c'>4 <f c'>8-. <d a'>-.
-  <ees bes'>4. r8
+  \repeat unfold 2 {
+    <c ees g c>4 <c ees g c>
+    <bes ees g bes> <bes ees g bes>
+    <c f c'>4 <c f c'>8-. <d a'>-.
+    <ees bes'>4. r8
 
-  <g d'>4 <d a'>
-  <ees bes'> <d a'>
-  <c g'> <d a'>
-  <c g'>8-. <c g'> <d a'>4
+    <d g bes d>4 <d f a d>
+    <ees g bes ees> <d a' d>
+    <c g' c> <d a' d>
+    <c g' c>8-. <c g' c> <d a' d>4
 
-  <g d'>4 <d a'>
-  <ees bes'> <d a'>
-  <c g'> <d a'>
-  <f c'>8-. <f c'> <g d'>4
-
-  <c, g'>4 <c g'>
-  <ees bes'> <ees bes'>
-  <f c'>4 <f c'>8-. <d a'>-.
-  <ees bes'>4. r8
-
-  <g d'>4 <d a'>
-  <ees bes'> <d a'>
-  <c g'> <d a'>
-  <c g'>8-. <c g'> <d a'>4
-
-  <g d'>4 <d a'>
-  <ees bes'> <d a'>
-  <c g'> <d a'>
-  <f c'>8-. <f c'> <g d'>4
+    <d g bes d>4 <d f a d>
+    <ees g bes ees> <d a' d>
+    <c g' c> <d a' d>
+    <f c'>8-. <f c'> <g d'>4
+  }
 }
 
 
