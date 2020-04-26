@@ -254,16 +254,16 @@ upperD = \relative c'' {
   \ottava 0
 
   \repeat unfold 2 {
-    \tuplet 3/2 {g,16-2 aes bes} \tuplet 3/2 {c bes aes}
+    \tuplet 3/2 {g,16-1 aes bes} \tuplet 3/2 {c bes aes}
   }
-  \ottava 1
   \repeat unfold 2 {
-    \tuplet 3/2 {g'16-2 aes bes} \tuplet 3/2 {c bes aes}
+    \tuplet 3/2 {d16-1 ees f} \tuplet 3/2 {g f ees}
   }
 
+  \ottava 1
   \tuplet 3/2 {g16-1 aes bes} \tuplet 3/2 {c-1 d ees}
   \tuplet 3/2 {f16 g f} \tuplet 3/2 {ees d c}
-  f8-4 g-. c,4 
+  f8-.-4 g-. c,4 
   ^"D.S. al Coda"
   \ottava 0
 }
