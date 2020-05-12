@@ -194,7 +194,7 @@ upperC = \relative c'' {
   <bes d>8 <a c>16 <g bes> <a c>8 <f a>
   <g bes>16 <f a> <ees g>8-. <d f>4
   <c ees>8 <d f>16 <ees g> <d f> <c ees> <bes d>8
-  <a f'>8-. <a f'> <g g'>4
+  <a f'>8-. <a f'> <g g'>4 \coda
 }
 
 lowerC = \relative c {
