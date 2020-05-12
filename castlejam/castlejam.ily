@@ -76,12 +76,12 @@ upperBa = \relative c'' {
   c16 d ees f g8 f16 g 
   g aes g f g4
   aes16 bes aes g f g aes g
-  f8 ees \autoBeamOff c8. g16 \autoBeamOn
+  f8-. ees-. \autoBeamOff c8. g16 \autoBeamOn
 
   c16 d ees f g8 f16 g 
   g aes g f <g bes>4
   aes16 bes aes r g aes g r
-  f8 ees c4
+  f8-. ees-. c4
 
   c16 d ees f g8 f16 g 
   g aes g f g4
@@ -118,8 +118,8 @@ upperAb = \relative c'' {
 
   <c' ees c'>4 <c ees c'>8. <d f d'>16
   <bes d bes'>8 <g bes g'>-. <g' bes g'>4
-  f16 ees d c bes a g f
-  g8-. ees'-. c4
+  f16 ees d c bes a bes g
+  bes8-. ees-. c4
 }
 
 lowerAb = \relative c {
@@ -152,7 +152,7 @@ upperBb = \relative c'' {
   bes aes g aes bes8 aes16 \prall g
   \ottava 0
   f ees d ees f8 ees16 \prall d
-  c bes c ees c4
+  c bes c ees c4 \segno
 }
 
 lowerBb = \relative c {
@@ -166,8 +166,6 @@ lowerBb = \relative c {
 
 
 upperC = \relative c'' {
-  \segno
-
   ees8 c d f
   g a bes g
   a bes16 a f8-. d-.
@@ -194,7 +192,7 @@ upperC = \relative c'' {
   <c ees>8-. <c ees> <f a>16 <g bes> <a c>8
 
   <bes d>8 <a c>16 <g bes> <a c>8 <f a>
-  <g bes>16 <f a> <ees g>8 <d f>4
+  <g bes>16 <f a> <ees g>8-. <d f>4
   <c ees>8 <d f>16 <ees g> <d f> <c ees> <bes d>8
   <a f'>8-. <a f'> <g g'>4
 }
@@ -203,11 +201,11 @@ lowerC = \relative c {
   \repeat unfold 2 {
     <c ees g c>4 <c ees g c>
     <bes ees g bes> <bes ees g bes>
-    <c f c'>4 <c f c'>8-. <d a'>-.
-    <ees bes'>4. r8
+    <c f c'>4 <d g d'>8-. <d a' d>-.
+    <ees bes' ees>4. r8
 
     <d g bes d>4 <d f a d>
-    <ees g bes ees> <d a' d>
+    <ees g bes ees> <d f a d>
     <c g' c> <d a' d>
     <c g' c>8-. <c g' c> <d a' d>4
 
@@ -232,9 +230,8 @@ upperD = \relative c'' {
   g8-1-. ees-2-. c4
   \ottava 0
 
-  \repeat unfold 2 {
-    \tuplet 3/2 {g16-2 aes bes} \tuplet 3/2 {c bes g}
-  }
+  \tuplet 3/2 {g16-2 aes bes} \tuplet 3/2 {c bes aes}
+  \tuplet 3/2 {g16-2 aes bes} \tuplet 3/2 {c bes g}
   <ees g>8 ees'-. <g, bes>4
 
   \ottava 1
@@ -278,9 +275,7 @@ lowerD = \relative c {
 }
 
 upperCoda = \relative c'' {
-  \coda
-
-  c2 \p
+  c2 \p \coda
   bes
   f
   g
