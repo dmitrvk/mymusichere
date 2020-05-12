@@ -1,29 +1,34 @@
-SCORES = castlejam
-OUT_DIR = out/scores
-
 ifndef LILYPOND
 LILYPOND = lilypond
 endif
 
-LILYPOND_PARAMS = --pdf --png -dresolution=150 --loglevel=PROGRESS
+ARCHIVE = scores.tar.gz
+LILYPOND_PARAMS = --pdf --png -dresolution=150 --loglevel=BASIC
+OUT_DIR = out
+SCORES = castlejam
+SOURCES = $(join $(SCORES), $(addprefix /, $(addsuffix .ly, $(SCORES))))
 
-PREREQUISITES = \
-	$(join $(SCORES), \
-	$(addprefix /, \
-	$(addsuffix .ly, \
-	$(SCORES))))
 
-all: $(PREREQUISITES)
-	@$(LILYPOND) $(LILYPOND_PARAMS) $(PREREQUISITES)
-	@#
-	@# Move artifacts to output directory
+.PHONY: all build thumbnails tar clean
+
+
+all: build thumbnails tar
+	@echo "Done."
+
+build:
+	@$(LILYPOND) $(LILYPOND_PARAMS) $(SOURCES)
+	@echo "Moving assets to $(OUT_DIR)/"
 	@-mkdir -p $(addprefix $(OUT_DIR)/, $(SCORES))
-	@for score in $(SCORES); do mv $$score.pdf $$score*.png $(OUT_DIR)/$$score/; done
-	@#
-	@# Create thumbnails
-	@for score in $(SCORES); do convert -colorspace GRAY -units pixelsperinch -thumbnail 180x "$$(ls -1 $(OUT_DIR)/$$score/*.png | head -n 1)" $(OUT_DIR)/$$score/thumbnail.png; done
+	@for score in $(SCORES); do mv $$score.pdf $$score*.png $$score.midi $(OUT_DIR)/$$score/; done
 
-.PHONY: clean
+thumbnails:
+	@echo "Creating thumbnails..."
+	@for score in $(SCORES); do convert -colorspace GRAY -units pixelsperinch -thumbnail 180x "$$(ls -1 $(OUT_DIR)/$$score/*.png | head -n 1)" $(OUT_DIR)/$$score/$$score-thumbnail.png; done
+
+tar:
+	@echo "Creating $(ARCHIVE)..."
+	@tar -C out/ -czf $(ARCHIVE) .
 
 clean:
-	-rm -r out
+	@-rm -rv out $(ARCHIVE)
+

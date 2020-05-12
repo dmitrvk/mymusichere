@@ -1,5 +1,6 @@
 *.midi
 *.pdf
 *.png
+*.tar.*
 
 out/
