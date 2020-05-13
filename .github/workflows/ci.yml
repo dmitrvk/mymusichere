@@ -33,4 +33,4 @@ jobs:
     - name: Deploy
       run: |
         rsync -avzhe ssh scores.tar.gz ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOSTNAME }}:${{ secrets.DESTINATION }}
-        ssh ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOSTNAME }} 'tar -xvf ${{ secrets.SSH_DESTINATION }}/scores.tar.gz -C ${{ secrets.SCORES_DIR }}'
+        ssh ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOSTNAME }} 'tar -xvf ${{ secrets.DESTINATION }}/scores.tar.gz -C ${{ secrets.SCORES_DIR }}'
