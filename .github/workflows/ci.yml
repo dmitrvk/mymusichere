@@ -23,3 +23,12 @@ jobs:
       run: make
       env:
         LILYPOND: $(HOME)/bin/lilypond
+
+    - name: Install SSH key
+      uses: shimataro/ssh-key-action@v2
+      with:
+        key: ${{ secrets.SSH_KEY }}
+        known_hosts: ${{ secrets.KNOWN_HOSTS }}
+
+    - name: Deploy
+      run: rsync -avzhe ssh scores.tar.gz ${{ secrets.SSH_SERVER_USERNAME }}@${{ secrets.SSH_SERVER_HOSTNAME }}:${{ secrets.SSH_SERVER_DESTINATION }}
