@@ -4,31 +4,24 @@ endif
 
 ARCHIVE = scores.tar.gz
 LILYPOND_PARAMS = --pdf --png -dresolution=150 --loglevel=BASIC
-OUT_DIR = out
 SCORES = castlejam
 SOURCES = $(join $(SCORES), $(addprefix /, $(addsuffix .ly, $(SCORES))))
 
 
-.PHONY: all build thumbnails tar clean
+.PHONY: all build thumbnails clean
 
 
-all: build thumbnails tar
+all: build thumbnails
 	@echo "Done."
 
 build:
 	@$(LILYPOND) $(LILYPOND_PARAMS) $(SOURCES)
-	@echo "Moving assets to $(OUT_DIR)/"
-	@-mkdir -p $(addprefix $(OUT_DIR)/, $(SCORES))
-	@for score in $(SCORES); do mv $$score.pdf $$score*.png $$score.midi $(OUT_DIR)/$$score/; done
+	@for score in $(SCORES); do mv $$score.pdf $$score*.png $$score.midi $$score/; done
 
 thumbnails:
 	@echo "Creating thumbnails..."
-	@for score in $(SCORES); do convert -colorspace GRAY -units pixelsperinch -thumbnail 180x "$$(ls -1 $(OUT_DIR)/$$score/*.png | head -n 1)" $(OUT_DIR)/$$score/$$score-thumbnail.png; done
-
-tar:
-	@echo "Creating $(ARCHIVE)..."
-	@tar -C out/ -czf $(ARCHIVE) .
+	@for score in $(SCORES); do convert -colorspace GRAY -units pixelsperinch -thumbnail 180x "$$(ls -1 $$score/*.png | head -n 1)" $$score/$$score-thumbnail.png; done
 
 clean:
-	@-rm -rv out $(ARCHIVE)
+	@-for score in $(SCORES); do rm $$score/$$score.pdf $$score/$$score*.png $$score/$$score.midi; done
 
