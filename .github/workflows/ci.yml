@@ -32,4 +32,4 @@ jobs:
 
     - name: Deploy
       run: |
-        rsync --dry-run -avzr --delete --exclude='.git*' . ${{ secrets.USER }}@${{ secrets.HOST }}:/home/${{ secrets.USER }}/mymusichere/
+        rsync -avzr --delete --exclude='.git*' . ${{ secrets.USER }}@${{ secrets.HOST }}:/home/${{ secrets.USER }}/mymusichere/
