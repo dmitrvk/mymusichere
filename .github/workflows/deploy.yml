@@ -1,13 +1,11 @@
-name: build
+name: deploy
 
 on:
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,7 +17,6 @@ jobs:
         wget http://lilypond.org/download/binaries/linux-64/lilypond-2.20.0-1.linux-64.sh
         sh lilypond-2.20.0-1.linux-64.sh --batch
         rm lilypond-2.20.0-1.linux-64.sh
-
     - name: Build
       run: |
         make
