@@ -21,7 +21,9 @@ jobs:
         rm lilypond-2.20.0-1.linux-64.sh
 
     - name: Build
-      run: make
+      run: |
+        make
+        make tar
       env:
         LILYPOND: $(HOME)/bin/lilypond
 
@@ -33,4 +35,6 @@ jobs:
 
     - name: Deploy
       run: |
-        rsync -avzr --delete --exclude='.git*' . ${{ secrets.USER }}@${{ secrets.HOST }}:/home/${{ secrets.USER }}/mymusichere/
+        rsync -avz scores.tar.gz ${{ secrets.USER }}@${{ secrets.HOST }}:/home/${{ secrets.USER }}/
+        ssh ${{ secrets.USER }}@${{ secrets.HOST }} 'rm -r ${{ secrets.SCORES_DIR }}; mkdir -p ${{ secrets.SCORES_DIR }}'
+        ssh ${{ secrets.USER }}@${{ secrets.HOST }} 'tar -xvf /home/${{ secrets.USER }}/scores.tar.gz -C ${{ secrets.SCORES_DIR }}'
