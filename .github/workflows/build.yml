@@ -21,8 +21,7 @@ jobs:
         rm lilypond-2.20.0-1.linux-64.sh
 
     - name: Build
-      run: |
-        make
+      run: make
       env:
         LILYPOND: $(HOME)/bin/lilypond
 
