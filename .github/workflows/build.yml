@@ -18,8 +18,10 @@ jobs:
         sudo apt install imagemagick
         wget http://lilypond.org/download/binaries/linux-64/lilypond-2.20.0-1.linux-64.sh
         sh lilypond-2.20.0-1.linux-64.sh --batch
+        rm lilypond-2.20.0-1.linux-64.sh
 
     - name: Build
       run: make
       env:
         LILYPOND: $(HOME)/bin/lilypond
+

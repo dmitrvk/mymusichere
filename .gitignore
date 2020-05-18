@@ -1,6 +1,4 @@
 *.midi
 *.pdf
 *.png
-*.tar.*
-
-out/
+*.tar.gz
