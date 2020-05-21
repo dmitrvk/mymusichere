@@ -7,12 +7,18 @@ LILYPOND_PARAMS = --pdf --png -dresolution=150 --loglevel=BASIC
 SCORES = $(shell find -maxdepth 1 -not -name '.*' -type d | cut -d'/' -f2)
 SOURCES = $(join $(SCORES), $(addprefix /, $(addsuffix .ly, $(SCORES))))
 
-
-.PHONY: all build thumbnails tar clean
-
+.PHONY: all help build thumbnails tar clean
 
 all: build thumbnails
 	@echo "Done."
+
+help:
+	@echo "make -- compile scores and create thumbnails"
+	@echo "make build -- compile scores (create PDF, PNG and MIDI files)"
+	@echo "make clean -- clean repository"
+	@echo "make help -- display this message"
+	@echo "make tar -- create archive with all scores"
+	@echo "make thumbnails -- create thumbnails"
 
 build:
 	@$(LILYPOND) $(LILYPOND_PARAMS) $(SOURCES)
