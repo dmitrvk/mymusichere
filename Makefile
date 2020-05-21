@@ -30,8 +30,9 @@ thumbnails:
 
 tar:
 	@echo "Creating archive..."
-	@tar -cvzf scores.tar.gz --exclude='*.midi' --exclude='*.*ly' $(SCORES)
+	@tar -cvzf $(ARCHIVE) --exclude='*.midi' --exclude='*.*ly' $(SCORES)
 
 clean:
 	@-for score in $(SCORES); do rm $$score/$$score.pdf $$score/$$score*.png $$score/$$score.midi; done
+	@-rm $(ARCHIVE)
 
