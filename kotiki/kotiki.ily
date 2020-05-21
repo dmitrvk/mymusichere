@@ -1,7 +1,5 @@
 upperIntro = \relative c' {
-  \mf
-
-  d8-. e-.  fis-. g-.-1  a16-4 b a8~  a4
+  d8-. \mf e-.  fis-. g-.-1  a16-4 b a8~  a4
   d,8-. e-.  fis-. a-.-1  b16-4 cis b8-.  fis8-2 r8
   d8-. e-.  fis-. g16-4 a  g8-. fis-.  e16 d e8-.
   d2 r2
@@ -76,9 +74,7 @@ lowerB = \relative c, {
 }
 
 upperAb = \relative c' {
-  \f
-
-  <d d'>8 <e e'>  <fis fis'> <g g'>  <a a'>16 <b b'> <a a'>8~  <a a'>4
+  <d d'>8 \f <e e'>  <fis fis'> <g g'>  <a a'>16 <b b'> <a a'>8~  <a a'>4
   <d, d'>8 <e e'>  <fis fis'> <a a'>-1  <b b'>16-4 <cis cis'> <b b'>8  <fis fis'>4-2
   <d d'>8 <e e'>  <fis fis'> <g g'>16-4 <a a'>  <g g'>8 <fis fis'>  <e e'>16 <d d'> <e e'>8-5
   <d d'>4  <bes bes'>  <a a'>  r
@@ -108,9 +104,7 @@ lowerAb = \relative c, {
 upperCoda = \relative c' {
   \override TextSpanner.bound-details.left.text = "rit."
 
-  \mf
-
-  d8 e  fis g16 a  g8 fis  e16 d e8
+  d8 \mf e  fis g16 a  g8 fis  e16 d e8
   d8 e  fis g16 a  g8 fis  e16 d e8
   d8 \> \startTextSpan e  fis g16 a  g8 fis  e16 d e8
   <d, fis d'>2  \acciaccatura { d''8 fis } d'4 r4 \stopTextSpan \!
