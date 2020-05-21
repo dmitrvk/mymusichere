@@ -4,7 +4,7 @@ endif
 
 ARCHIVE = scores.tar.gz
 LILYPOND_PARAMS = --pdf --png -dresolution=150 --loglevel=BASIC
-SCORES = castlejam kotiki
+SCORES = $(shell find -maxdepth 1 -not -name '.*' -type d | cut -d'/' -f2)
 SOURCES = $(join $(SCORES), $(addprefix /, $(addsuffix .ly, $(SCORES))))
 
 
