@@ -8,7 +8,6 @@
   arranger = "Arranged by Dmitry Kalyukov"
   instruments = "piano"
   license = "Creative Commons Attribution-ShareAlike 4.0"
-  status = "unfinished"
 }
 
 \paper {
@@ -22,7 +21,7 @@ upper = \relative c'' {
   \clef treble
   \time 2/4
   \key c \minor
-  \tempo 4 = 75
+  \tempo 4 = 73
 
   \upperIntro
   \upperAa
