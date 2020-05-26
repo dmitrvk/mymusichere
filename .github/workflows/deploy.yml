@@ -35,3 +35,5 @@ jobs:
         rsync -avz scores.tar.gz ${{ secrets.USER }}@${{ secrets.HOST }}:/home/${{ secrets.USER }}/
         ssh ${{ secrets.USER }}@${{ secrets.HOST }} 'rm -r ${{ secrets.SCORES_DIR }}; mkdir -p ${{ secrets.SCORES_DIR }}'
         ssh ${{ secrets.USER }}@${{ secrets.HOST }} 'tar -xvf /home/${{ secrets.USER }}/scores.tar.gz -C ${{ secrets.SCORES_DIR }}'
+        curl -H 'Authorization: Token ${{ secrets.TOKEN }}' -X POST https://www.mymusichere.me/scores/publish
+
