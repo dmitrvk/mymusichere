@@ -23,7 +23,7 @@ upper = \relative c'' {
   \upperA
   \upperB
 
-  \time 11/8
+  \time 11/16
   \tempo 4 = 70
   \upperCoda
 }
@@ -34,9 +34,6 @@ lower = \relative c {
   \key g \major
 
   \lowerAB
-
-  \time 11/16
-  \tempo 4 = 70
   \lowerCoda
 }
 
