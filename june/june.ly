@@ -1,7 +1,7 @@
 \version "2.20.0"
 
 \header {
-  title = "New"
+  title = "june"
   composer = "Dmitry Kalyukov"
   instruments = "piano"
   license = "Creative Commons Attribution-ShareAlike 4.0"
@@ -12,7 +12,7 @@
   bottom-margin = 2\cm
 }
 
-\include "new.ily"
+\include "june.ily"
 
 upper = \relative c'' {
   \clef treble
@@ -24,7 +24,6 @@ upper = \relative c'' {
   \upperB
 
   \time 11/16
-  \tempo 4 = 70
   \upperCoda
 }
 

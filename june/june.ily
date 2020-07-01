@@ -38,6 +38,6 @@ upperCoda = \relative c'' {
 lowerCoda = \relative c' {
   g8 <d' g>  r8 r8.  <d g>8
   fis,8 <d' fis>  r8 r8.  <d fis>8
-  e,8 <b' e>  r8 r8.  <b e>8
+  e,8 <b' e>  r8 r16 r4
   c,,2  r8.
 }
