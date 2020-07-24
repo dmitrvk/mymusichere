@@ -1,7 +1,7 @@
 \version "2.20.0"
 
 \header {
-  title = "forest light"
+  title = "Forest light"
   composer = "Dmitry Kalyukov"
   mmh_composer = "Dmitry Kalyukov"
   instruments = "piano"
