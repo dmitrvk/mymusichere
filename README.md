@@ -3,12 +3,6 @@
 [![build](https://img.shields.io/github/workflow/status/dmitrvk/mymusichere/build?color=3e3e3e&style=flat-square)](https://github.com/dmitrvk/mymusichere/actions)
 [![License: CC BY-SA 4.0](https://img.shields.io/github/license/dmitrvk/mymusichere?color=3e3e3e&style=flat-square)](https://github.com/dmitrvk/mymusichere/blob/master/LICENCE)
 
-In this repo you will find sheet music typeset with
-[LilyPond](https://lilypond.org).
-
-Compiled versions are available at
-[www.mymusichere.me](https://www.mymusichere.me).
-
 The idea of MyMusicHere project is to automate the process
 of publishing sheet music that was typeset with the
 [LilyPond](http://lilypond.org) system.
