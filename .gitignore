@@ -2,3 +2,5 @@
 *.pdf
 *.png
 *.tar.gz
+
+!/score.png
