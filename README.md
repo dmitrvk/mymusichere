@@ -21,7 +21,8 @@ Resulting PDF files and PNG images are sent to the webserver
 where the application publishes new scores on the
 [website](http://www.mymusichere.me).
 
-Each score has a unique 'slug'.
+Each score has a unique
+[slug](https://docs.djangoproject.com/en/3.1/glossary/#term-slug).
 This allows to create a simple and readable URL for each score, for example,
 [https://www.mymusichere.me/june](https://www.mymusichere.me/june).
 
