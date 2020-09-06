@@ -1,9 +1,17 @@
-"""The script collects scores' meta and send it to the server."""
+#!/usr/bin/env python
 
-import json
+"""The script collects scores' meta and sends it to the server.
+
+Needs PUBLISH_TOKEN environment variable to be set.
+"""
+
+import argparse
 import operator
 import os
 import subprocess
+import sys
+
+import requests
 
 
 SUPPORTED_HEADER_FIELDS = [
@@ -13,6 +21,10 @@ SUPPORTED_HEADER_FIELDS = [
 
 def main() -> None:
     """Scan for directories with scores, make JSON and send request."""
+    parser = argparse.ArgumentParser()
+    parser.add_argument('url')
+    args = parser.parse_args()
+
     scores: list = []
 
     with os.scandir() as dir_entries:
@@ -20,9 +32,15 @@ def main() -> None:
             if entry.is_dir() and entry.name[0].isalpha():
                 scores.append(parse_score(entry.name))
 
-    scores_json = json.dumps(scores, indent=4)
+    headers = {'Authorization': 'Token {}'.format(os.getenv('PUBLISH_TOKEN'))}
 
-    print(scores_json)  # make POST request
+    response = requests.post(args.url, headers=headers, json=scores)
+
+    if response.status_code == 200:
+        print('OK')
+    else:
+        print(f'Code {response.status_code}: {response.content}')
+        sys.exit(1)
 
 
 def parse_score(score_slug: str) -> dict:
