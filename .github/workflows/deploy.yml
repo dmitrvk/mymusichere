@@ -21,10 +21,14 @@ jobs:
         sh lilypond-2.20.0-1.linux-64.sh --batch
         rm lilypond-2.20.0-1.linux-64.sh
 
-    - name: Set up Python ${{ matrix.python-version }}
+    - name: Set up python ${{ matrix.python-version }}
       uses: actions/setup-python@v1
       with:
         python-version: ${{ matrix.python-version }}
+
+    - name: Install Python dependencies
+      run: |
+        pip install -r requirements.txt
 
     - name: Build
       run: |
@@ -39,10 +43,11 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         known_hosts: ${{ secrets.KNOWN_HOSTS }}
 
-    - name: Deploy
+    - name: Copy assets to the server
       run: |
         rsync -avz scores.tar.gz ${{ secrets.USER }}@${{ secrets.HOST }}:/home/${{ secrets.USER }}/
-        ssh ${{ secrets.USER }}@${{ secrets.HOST }} 'rm -r ${{ secrets.SCORES_DIR }}; mkdir -p ${{ secrets.SCORES_DIR }}'
-        ssh ${{ secrets.USER }}@${{ secrets.HOST }} 'tar -xvf /home/${{ secrets.USER }}/scores.tar.gz -C ${{ secrets.SCORES_DIR }}'
-        python publish.py https://www.mymusichere.me/scores/publish
+        ssh ${{ secrets.USER }}@${{ secrets.HOST }} 'rm -r ${{ secrets.SCORES_DIR }} && mkdir -p ${{ secrets.SCORES_DIR }} && tar -xvf /home/${{ secrets.USER }}/scores.tar.gz -C ${{ secrets.SCORES_DIR }}'
 
+    - name: Update database
+      run: |
+        python publish.py https://www.mymusichere.me/scores/publish
