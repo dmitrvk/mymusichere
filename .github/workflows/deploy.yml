@@ -51,3 +51,5 @@ jobs:
     - name: Update database
       run: |
         python publish.py https://www.mymusichere.me/scores/publish
+      env:
+        PUBLISH_TOKEN: ${{ secrets.TOKEN }}
