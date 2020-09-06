@@ -7,6 +7,9 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.8]
 
     steps:
     - uses: actions/checkout@v2
@@ -17,6 +20,12 @@ jobs:
         wget http://lilypond.org/download/binaries/linux-64/lilypond-2.20.0-1.linux-64.sh
         sh lilypond-2.20.0-1.linux-64.sh --batch
         rm lilypond-2.20.0-1.linux-64.sh
+
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v1
+      with:
+        python-version: ${{ matrix.python-version }}
+
     - name: Build
       run: |
         make
@@ -35,5 +44,5 @@ jobs:
         rsync -avz scores.tar.gz ${{ secrets.USER }}@${{ secrets.HOST }}:/home/${{ secrets.USER }}/
         ssh ${{ secrets.USER }}@${{ secrets.HOST }} 'rm -r ${{ secrets.SCORES_DIR }}; mkdir -p ${{ secrets.SCORES_DIR }}'
         ssh ${{ secrets.USER }}@${{ secrets.HOST }} 'tar -xvf /home/${{ secrets.USER }}/scores.tar.gz -C ${{ secrets.SCORES_DIR }}'
-        curl -H 'Authorization: Token ${{ secrets.TOKEN }}' -X POST https://www.mymusichere.me/scores/publish
+        python publish.py https://www.mymusichere.me/scores/publish
 
