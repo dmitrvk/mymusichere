@@ -4,3 +4,5 @@
 *.tar.gz
 
 !/score.png
+
+__pycache__/
