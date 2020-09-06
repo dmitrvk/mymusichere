@@ -3,7 +3,6 @@
 \header {
   title = "Forest light"
   composer = "Dmitry Kalyukov"
-  mmh_composer = "Dmitry Kalyukov"
   instruments = "piano"
   license = "Creative Commons Attribution-ShareAlike 4.0"
 }

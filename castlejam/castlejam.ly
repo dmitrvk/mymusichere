@@ -2,7 +2,6 @@
 
 \header {
   title = "Castle Jam"
-  mmh_title = "Castle Jam"
   subtitle = "from Stronghold game"
   subsubtitle = "piano cover"
   arranger = "Arranged by Dmitry Kalyukov"
