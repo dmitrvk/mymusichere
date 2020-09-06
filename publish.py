@@ -37,7 +37,7 @@ def main() -> None:
     response = requests.post(args.url, headers=headers, json=scores)
 
     if response.status_code == 200:
-        print('OK')
+        print(response.content.decode())
     else:
         print(f'Code {response.status_code}: {response.content}')
         sys.exit(1)
