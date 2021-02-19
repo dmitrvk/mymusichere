@@ -1,7 +1,7 @@
 \version "2.20.0"
 
 \header {
-  title = "I go somewhere"
+  title = "I Go Somewhere"
   composer = "Dmitry Kalyukov"
   instruments = "piano"
   license = "Creative Commons Attribution-ShareAlike 4.0"
