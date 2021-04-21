@@ -1,6 +1,7 @@
 # MyMusicHere
 
-[![License: CC BY-SA 4.0](https://img.shields.io/github/license/dmitrvk/mymusichere?color=3e3e3e&style=flat-square)](https://github.com/dmitrvk/mymusichere/blob/master/LICENCE)
+[![CI/CD](https://img.shields.io/github/workflow/status/dmitrvk/mymusichere/deploy?color=373737&label=CI%2FCD&style=flat-square)](https://github.com/dmitrvk/mymusichere/actions)
+[![License: CC BY-SA 4.0](https://img.shields.io/github/license/dmitrvk/mymusichere?color=373737&style=flat-square)](https://github.com/dmitrvk/mymusichere/blob/master/LICENCE)
 
 The idea of MyMusicHere project is to automate the process
 of publishing sheet music that was typeset with the
